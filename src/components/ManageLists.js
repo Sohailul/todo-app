@@ -4,7 +4,7 @@ const ManageLists = () => {
     const [lists, setLists] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/list')
+        fetch('https://mysterious-peak-29904.herokuapp.com/list')
             .then(res => res.json())
             .then(data => setLists(data))
     }, [])
@@ -13,7 +13,7 @@ const ManageLists = () => {
         const proceed = window.confirm('Are you sure?');
 
         if (proceed) {
-            const url = `http://localhost:5000/list/${id}`;
+            const url = `https://mysterious-peak-29904.herokuapp.com/list/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

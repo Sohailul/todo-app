@@ -9,7 +9,7 @@ const AddILists = () => {
 
         const list = { name, description };
 
-        fetch('http://localhost:5000/list', {
+        fetch('https://mysterious-peak-29904.herokuapp.com/list', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
