@@ -38,10 +38,10 @@ const ManageLists = () => {
                 </thead>
                 <tbody>
                     {
-                        lists.map(list =>
+                        lists.map((list, index) =>
                             <>
                                 <tr key={list._id}>
-                                    <th scope="row">1</th>
+                                    <th scope="row">{index + 1}</th>
                                     <td>{list.name}</td>
                                     <td>{list.description}</td>
                                     <td><button onClick={() => handleDelete(list._id)} className='btn btn-danger'>Delete</button></td>
